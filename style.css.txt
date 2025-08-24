@@ -1,6 +1,12 @@
 
 body {
-  font-family: 'Playfair Display', serif;
+  background: linear-gradient(135deg, #fff8e5 0%, #fff1d8 25%, #fffbe0 50%, #fdf3d0 75%, #fff8e5 100%) !important;
+  background-size: 400% 400% !important;
+  animation: glossyFlow 8s ease-in-out infinite !important;
+
+}
+
+font-family: 'Playfair Display', serif;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
