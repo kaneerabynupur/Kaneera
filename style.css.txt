@@ -1,18 +1,15 @@
 
+/* =========================
+   General Page Style
+========================= */
 body {
-  background: linear-gradient(135deg, #fff8e5 0%, #fff1d8 25%, #fffbe0 50%, #fdf3d0 75%, #fff8e5 100%) !important;
-  background-size: 400% 400% !important;
-  animation: glossyFlow 8s ease-in-out infinite !important;
-
-}
-
-font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  color: #333;
+  color: #3a2e2b;
 
-  /* Glossy silk gradient background */
+  /* Glossy satin ivory background */
   background: linear-gradient(135deg, #fff8e5 0%, #fff1d8 25%, #fffbe0 50%, #fdf3d0 75%, #fff8e5 100%);
   background-size: 400% 400%;
   animation: glossyFlow 8s ease-in-out infinite;
@@ -44,21 +41,59 @@ body::before {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-
 }
 
+/* =========================
+   Header / Logo
+========================= */
 header {
-  text-align: center;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
   background-color: rgba(255, 248, 229, 0.8); /* glossy overlay */
+  backdrop-filter: blur(5px);
   border-bottom: 2px solid #e2d1c3;
   position: sticky;
   top: 0;
   z-index: 1000;
-  backdrop-filter: blur(5px); /* subtle glossy effect */
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
+header .logo {
+  max-width: 250px;
+  height: auto;
+  display: block;
+}
+
+/* =========================
+   Sections
+========================= */
+section {
+  text-align: center;
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: rgba(255, 248, 229, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+h1, h2, h3 {
+  color: #5c3d2e; /* warm brown */
+  margin-bottom: 20px;
+}
+
+p {
+  color: #3a2e2b;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+
+/* =========================
+   Collections Grid
+========================= */
 .collections .grid {
   display: flex;
   justify-content: center;
@@ -67,7 +102,7 @@ header {
   border: 2px dashed #b8860b;
   margin: 20px auto;
   max-width: 90%;
-  background-color: rgba(255, 250, 240, 0.7); /* glossy overlay */
+  background-color: rgba(255, 250, 240, 0.7);
   border-radius: 12px;
   transition: 0.3s ease, transform 0.3s ease;
   backdrop-filter: blur(2px);
@@ -75,27 +110,56 @@ header {
 
 .collections .grid:hover {
   background-color: rgba(255, 255, 255, 0.85);
-  border-color: #daa520; /* golden glow on hover */
+  border-color: #daa520;
   transform: scale(1.03);
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
+/* =========================
+   Footer
+========================= */
 footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9em;
   color: #555;
-  background-color: rgba(250, 243, 224, 0.85); /* glossy overlay */
+  background-color: rgba(250, 243, 224, 0.85);
   border-top: 1px solid #e2d1c3;
   backdrop-filter: blur(4px);
   box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
 }
 
+/* =========================
+   Links & Buttons
+========================= */
+a, .btn {
+  color: #b8860b;
+  text-decoration: none;
+  transition: color 0.3s;
+}
 
+a:hover, .btn:hover {
+  color: #daa520;
+}
 
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  section {
+    padding: 30px 15px;
+  }
 
-  
+  h1, h2, h3 {
+    font-size: 1.5em;
+  }
 
+  .collections .grid {
+    flex-direction: column;
+    height: auto;
+  }
 
-
-
+  header .logo {
+    max-width: 180px;
+  }
+}
